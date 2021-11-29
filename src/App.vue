@@ -29,6 +29,7 @@ methods:{
         this.filmList = [],
         this.Query = dato;
 
+        if (dato !== ''){
         axios
             .get('https://api.themoviedb.org/3/search/movie',{
                 params:{
@@ -42,6 +43,10 @@ methods:{
                 });
             })
           }
+        else {
+            this.filmList = null
+        }
+        }
       }
   }
 

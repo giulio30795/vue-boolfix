@@ -3,10 +3,11 @@
         <input 
         v-model="Query"
         type="text" 
-        placeholder="Search">
-        
+        placeholder="Search"
+        @keyup.enter="$emit('userQuery',Query), clearinput()"
+        >
         <button
-            @click="$emit('userQuery',Query)"
+            @click="$emit('userQuery',Query), clearinput()"
             >Search</button>
     </section>
 </template>
@@ -20,6 +21,12 @@ data(){
         Query: '',
     }
 },
+
+methods:{
+    clearinput(){
+        this.Query = '';
+    }
+}
 
 }
 
