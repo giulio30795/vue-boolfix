@@ -1,11 +1,11 @@
 <template>
-      <ul>
-          <li>{{OriginalTitle}}</li>
-          <li>{{Title}}</li>
-          <li v-if="lingua.includes(Language)"><img :src="require(`../assets/${Language}.png`)" alt="Language"></li>
-          <li v-else>{{Language}}</li>
-          <li>{{Vote}}</li>
-      </ul>
+    <ul>
+        <li>{{OriginalTitle}}</li>
+        <li>{{Title}}</li>
+        <li v-if="lingua.includes(Language)"><img :src="require(`../assets/${Language}.png`)" alt="Language"></li>
+        <li v-else>{{Language}}</li>
+        <li>{{Vote}}</li>
+    </ul>
 </template>
 
 <script>
@@ -23,8 +23,6 @@ data(){
         lingua: [ "en", "it"],
     }
 },
-
-
 
 }
 </script>
