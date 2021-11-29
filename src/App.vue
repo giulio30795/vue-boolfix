@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header @userQuery="getQuery" />
-    <MainContent :filmList="filmList" />
+    <MainContent :filmList="filmList"/>
   </div>
 </template>
 
@@ -25,18 +25,17 @@ data(){
 },
 
 methods:{
-  getQuery(dato){
-    this.filmList = [],
-    this.Query = dato;
+    getQuery(dato){
+      this.filmList = [],
+      this.Query = dato;
 
-    axios.get(`https://api.themoviedb.org/3/search/movie?api_key=242cb2071d02c21e8ab48c9701678b9c&query=${dato}`)
-    .then((response) => {
-          response.data.results.forEach(element => {
-          this.filmList.push(element)
-        });
-        })
-
-  }
+      axios.get(`https://api.themoviedb.org/3/search/movie?api_key=242cb2071d02c21e8ab48c9701678b9c&query=${dato}`)
+      .then((response) => {
+            response.data.results.forEach(element => {
+            this.filmList.push(element)
+          });
+          })
+    }
 }
 }
 

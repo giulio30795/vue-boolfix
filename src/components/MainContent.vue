@@ -1,5 +1,5 @@
 <template>
-<div>
+    <div>
         <Card
         v-for="(element, index) in filmList" :key="`card-${index}`"
         :OriginalTitle="element.original_title"
@@ -7,8 +7,7 @@
         :Language="element.original_language"
         :Vote="element.vote_average"
         />
-  
-</div>
+    </div>
 </template>
 
 <script>
