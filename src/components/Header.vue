@@ -1,14 +1,28 @@
 <template>
     <section>
-        <input type="text" placeholder="Search">
-        <button>Search</button>
+        <input 
+        v-model="Query"
+        type="text" 
+        placeholder="Search">
+        
+        <button
+            @click="$emit('userQuery',Query)"
+            >Search</button>
     </section>
 </template>
 
 <script>
 export default {
-name: 'Header'
+name: 'Header',
+
+data(){
+    return {
+        Query: '',
+    }
+},
+
 }
+
 </script>
 
 <style scoped lang="scss">
