@@ -23,7 +23,6 @@ data(){
         lingua: [ "en", "it"],
     }
 },
-
 }
 </script>
 
