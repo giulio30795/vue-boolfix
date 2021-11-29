@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header @userQuery="getQuery" />
-    <MainContent :filmList="filmList"/>
+    <MainContent :filmList="filmList" />
   </div>
 </template>
 

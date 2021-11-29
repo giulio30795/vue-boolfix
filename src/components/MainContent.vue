@@ -1,22 +1,29 @@
 <template>
-  <section>
-    <ul v-for="(element, index) in filmList" :key="`list-${index}`">
-        <li>{{element.original_title}}</li>
-        <li>{{element.title}}</li>
-        <li>{{element.original_language}}</li>
-        <li>{{element.vote_average}}</li>
-    </ul>
-
-  </section>
+<div>
+        <Card
+        v-for="(element, index) in filmList" :key="`card-${index}`"
+        :OriginalTitle="element.original_title"
+        :Title="element.title"
+        :Language="element.original_language"
+        :Vote="element.vote_average"
+        />
+  
+</div>
 </template>
 
 <script>
+import Card from '@/components/Card.vue'
 export default {
 name: 'MainContent',
 
 props:{
     filmList: Array,
-}
+},
+
+components:{
+    Card,
+},
+
 }
 
 </script>
