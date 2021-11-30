@@ -42,7 +42,21 @@ methods:{
                 this.filmList.push(element)
                 });
             })
+        axios
+            .get('https://api.themoviedb.org/3/search/tv',{
+                params:{
+                    api_key: '242cb2071d02c21e8ab48c9701678b9c',
+                    query: `${dato}`
+                },
+            })
+            .then((response) => {
+                response.data.results.forEach(element => {
+                this.filmList.push(element)
+                });
+            })
+
           }
+
         else {
             this.filmList = null
         }
