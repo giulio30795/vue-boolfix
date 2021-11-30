@@ -40,4 +40,9 @@ img{
     width: 30px;
 }
 
+ul > img {
+    width: 150px;
+}
+
+
 </style>
