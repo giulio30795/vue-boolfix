@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <Header @userQuery="getQuery" />
-    <MainContent :filmList="filmList"/>
+    <MainContent 
+                :filmList="filmList"
+                :seriesList="seriesList"
+    />
   </div>
 </template>
 
@@ -21,12 +24,14 @@ data(){
     return{
         Query:'',
         filmList: [],
+        seriesList: [],
     }
 },
 
 methods:{
     getQuery(dato){
         this.filmList = [],
+        this.seriesList = [],
         this.Query = dato;
 
         if (dato !== ''){
@@ -51,7 +56,7 @@ methods:{
             })
             .then((response) => {
                 response.data.results.forEach(element => {
-                this.filmList.push(element)
+                this.seriesList.push(element)
                 });
             })
 
@@ -59,8 +64,10 @@ methods:{
 
         else {
             this.filmList = null
+            this.seriesList = null
         }
         }
+    
       }
   }
 
