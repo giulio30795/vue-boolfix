@@ -1,24 +1,22 @@
 <template>
     <div>
         <Card
-        v-for="element in filmList && seriesList" :key="element.id"
-        :OriginalTitle="element.original_title"
-        :OriginalName="element.original_name"
-        :Name="element.name"
-        :Title="element.title"
-        :Language="element.original_language"
-        :Vote="element.vote_average"
+        v-for="element in filmList" :key="element.id"
+            :Poster="`https://image.tmdb.org/t/p/w154${element.poster_path}`"
+            :OriginalTitle="element.original_title"
+            :Title="element.title"
+            :Language="element.original_language"
+            :Vote="element.vote_average"
         />
 
-        <!-- <Card
-        v-for="(element, index) in seriesList" :key="`list-${index}`"
-        
-        :OriginalName="element.original_name"
-        
-        :Name="element.name"
-        :Language="element.original_language"
-        :Vote="element.vote_average" -->
-        
+        <Card
+        v-for="element in seriesList" :key="element.id"
+            :Poster="`https://image.tmdb.org/t/p/w154${element.poster_path}`"
+            :OriginalName="element.original_name"
+            :Name="element.name"
+            :Language="element.original_language"
+            :Vote="element.vote_average"
+        />
     </div>
 </template>
 
