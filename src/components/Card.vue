@@ -20,7 +20,6 @@
             </li>
         </ul>
     </div>
-    
 </template>
 
 <script>
@@ -56,7 +55,7 @@ img{
 
 ul > img {
     width: 300px;
-    height: 100%;
+    height: 450px;
 }
 
 
