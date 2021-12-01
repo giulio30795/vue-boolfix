@@ -8,7 +8,16 @@
         <li>{{Title}}{{Name}}</li>
         <li v-if="lingua.includes(Language)"><img :src="require(`../assets/${Language}.png`)" alt="Language"></li>
         <li v-else>{{Language}}</li>
-        <li>{{Vote}}</li>
+
+        <li>
+            <div>
+                <i v-for="(n, index) in Math.ceil(Vote / 2)" :key="`list-${index}`"
+                class="fas fa-star"></i>
+                <i v-for="(n, index) in 5 - Math.ceil(Vote / 2)" :key="`list-${index}`"
+                class="far fa-star"></i>
+            </div>
+        </li>
+        <!-- <li>{{Vote}}</li> -->
     </ul>
     
 </template>
@@ -43,6 +52,7 @@ img{
 ul > img {
     width: 150px;
 }
+
 
 
 </style>
