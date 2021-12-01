@@ -11,13 +11,12 @@
 
         <li>
             <div>
-                <i v-for="(n, index) in Math.ceil(Vote / 2)" :key="`list-${index}`"
+                <i v-for="(n, index) in Math.ceil(Vote / 2)" :key="`number-${index}`"
                 class="fas fa-star"></i>
                 <i v-for="(n, index) in 5 - Math.ceil(Vote / 2)" :key="`list-${index}`"
                 class="far fa-star"></i>
             </div>
         </li>
-        <!-- <li>{{Vote}}</li> -->
     </ul>
     
 </template>
