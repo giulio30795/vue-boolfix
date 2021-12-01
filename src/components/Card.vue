@@ -9,15 +9,15 @@
 
         <div class="text-container">
             <ul class="list-unstyled">
-                <li>
+                <li class="mb-2">
                     <h4>Titolo</h4>
                     {{OriginalTitle}}{{OriginalName}}
                 </li>
-                <li>
+                <li class="mb-2">
                     <h4>Titolo Originale</h4>
                     {{Title}}{{Name}}
                 </li>
-                <li>
+                <li class="mb-2">
                     <div>
                         <h4>Voto</h4>
                         <i v-for="(n, index) in Math.ceil(Vote / 2)" :key="`number-${index}`"
@@ -26,7 +26,8 @@
                         class="far fa-star"></i>
                     </div>
                 </li>
-                <li class="fs-6 overflow-auto">
+                <li class="fs-6">
+                    <h4>Overview</h4>
                     {{Overview}}
                 </li>
             </ul>
@@ -85,11 +86,11 @@ img {
     text-align: center;
     top: 0px;
     left: 0px;
-    color: black;
+    color: white;
     width: 100%;
     height:100%;
     overflow: hidden;
-    background-color: rgba($color: #272626, $alpha: .5);
+    background-color: rgba($color: black, $alpha: .5);
     }
 }
 
