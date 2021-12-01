@@ -12,10 +12,12 @@
         </div>
 
         <div class="d-flex justify-content-end align-items-center">
+            <i class="fas fa-bell mx-3"></i>
             <img class="logo-profilo" src="https://static.wikia.nocookie.net/925fa2de-087e-47f4-8aed-4f5487f0a78c/scale-to-width/755" alt="profile-logo">
             
             <input 
             v-model="Query"
+            placeholder="Search"
             type="text"
             @keyup.enter="$emit('userQuery',Query), clearinput()"
             >
@@ -50,8 +52,23 @@ methods:{
 <style scoped lang="scss">
 
 header{
+    background-color: black;
     padding: 1rem;
     color: white;
+    position: fixed;
+    width: 100%;
+    height: 120px;
+    z-index:1;
+        i{
+            font-size: 1.5rem;
+        }
+        div{
+            background-color: black;
+        }
+}
+
+li{
+    cursor: pointer;
 }
 
 .logo-profilo{
@@ -62,13 +79,16 @@ header{
 }
 input{
     color: white;
+    background-color: black;
     border-style: none;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgb(212, 209, 209);
         &:focus{
             border-bottom: 2px solid white;
+            outline: none;
     }
 }
 button{
+    background-color: black;
     margin-left: 1rem;
     color: white;
     border-radius: 20px;
