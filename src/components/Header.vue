@@ -67,7 +67,7 @@ header{
         }
 }
 
-li{
+li, i{
     cursor: pointer;
 }
 
@@ -85,6 +85,9 @@ input{
         &:focus{
             border-bottom: 2px solid white;
             outline: none;
+        &::placeholder{
+            color:transparent;
+        }
     }
 }
 button{
