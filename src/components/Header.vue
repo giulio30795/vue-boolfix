@@ -16,8 +16,7 @@
             
             <input 
             v-model="Query"
-            type="text" 
-            placeholder="Search"
+            type="text"
             @keyup.enter="$emit('userQuery',Query), clearinput()"
             >
             <button
@@ -52,15 +51,29 @@ methods:{
 
 header{
     padding: 1rem;
+    color: white;
 }
 
 .logo-profilo{
-    width: 50px;
+    width: 40px;
+    height: 40px;
     margin-right: 1rem,
-    
-}
 
+}
+input{
+    color: white;
+    border-style: none;
+    border-bottom: 1px solid white;
+        &:focus{
+            border-bottom: 2px solid white;
+    }
+}
 button{
     margin-left: 1rem;
+    color: white;
+    border-radius: 20px;
+    border-style: none;
+    border: 2px solid white;
+    padding: 5px
 }
 </style>

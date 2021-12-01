@@ -74,5 +74,7 @@ methods:{
 </script>
 
 <style lang="scss">
-
+*{
+   background-color: black;
+}
 </style>
