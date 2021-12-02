@@ -68,7 +68,7 @@ data(){
         filter: blur(5px);
     }
     &:hover .text-container{
-        transition: .5s;
+        transition: .8s;
         filter: opacity(100%);
     }
     h4{
