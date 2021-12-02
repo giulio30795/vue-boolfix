@@ -63,8 +63,14 @@ data(){
 .card-container{
     position: relative;
     background-color: transparent;
+    cursor: pointer;
+            &:hover .img-container {
+                filter: blur(5px);
+            }
             &:hover .text-container{
-            display: block;
+                transition: .5s;
+                filter: opacity(100%);
+                transform: rotate(360deg);
         h4{
             font-size: 1rem;
             color: #dc1a28;
@@ -78,25 +84,20 @@ data(){
     font-size: 14px;
 }
 }
-
-
 img {
     width: 300px;
     height: 400px;
-
 }
 
 .text-container{
-    display: none;
+    filter: opacity(0%);
     position: absolute;
-    text-align: center;
     top: 0px;
     left: 0px;
     color: white;
     width: 100%;
     height:100%;
     overflow: hidden;
-    background-color: rgba($color: black, $alpha: .5);
     }
 }
 

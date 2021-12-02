@@ -1,11 +1,12 @@
 <template>
     <div class="contenitore">
 
-        <div v-show="filmList.length === 0 && seriesList.length === 0">
-            <h2 class=" main-placeholder mt-5 text-center">Scegli un titolo dal nostro catalogo e goditi lo spettacolo!</h2>
+        <div class="main-placeholder ds-flex flex-column" v-show="filmList.length === 0 && seriesList.length === 0">
+            <h2 class=" fs-2 mt-5 text-center">Scegli un titolo dal nostro catalogo e goditi lo spettacolo!</h2>
+            <div class="flex-grow-1 ds-flex align-items-center"> 
+                <img class=" flix-logo ms-5 mt-5 justify-self-center" src="https://fontmeme.com/permalink/211202/bec1c906b74dd02dc222c398ed8c8df6.png" alt="FlixFlix">
+            </div>
         </div>
-
-
 
         <div class="ds-flex align-items-center mx-4 my-2"
             v-show="filmList.length > 0">
@@ -13,7 +14,9 @@
             <h2 class="">Film</h2>
         </div>
 
-        <section class="film d-flex p-2">
+        <section
+                v-show="filmList.length > 0"
+                class="film ds-flex p-2">
                 <Card
                 v-for="element in filmList" :key="element.id"
                     :Poster="`https://image.tmdb.org/t/p/w500${element.poster_path}`"
@@ -30,7 +33,9 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Netflix-new-icon.png" alt="logo">
             <h2 class="">Serie TV</h2>
         </div>
-        <section class="serie-tv d-flex p-2">
+        <section 
+        v-show="seriesList.length > 0"
+        class="serie-tv ds-flex p-2">
                 <Card
                 v-for="element in seriesList" :key="element.id"
                     :Poster="`https://image.tmdb.org/t/p/w500${element.poster_path}`"
@@ -65,7 +70,19 @@ components:{
 <style scoped lang="scss">
 
 .main-placeholder{
-    color: #dc1a28
+    width:100%;
+    height: calc(100vh - 120px);
+    background-image: url('../assets/9wzdncrfj3tj-background.jpg');
+    background-size:cover ;
+    background-position: top;
+    overflow-y:hidden;
+    h2{
+        color: #dc1a28;
+    }
+    .flix-logo{
+            width: 500px;
+            height:250px;
+        }
 }
 
 .ds-flex{
