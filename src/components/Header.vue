@@ -1,9 +1,9 @@
 <template>
-    <header class="d-flex justify-content-between">
+    <header class="d-flex justify-content-between align-items-center">
         
         <div class="d-flex justify-content-center align-items-center">
-            <img src="https://fontmeme.com/permalink/211201/64bc1d45af49ec05ce492a388017c0ec.png" alt="FlixFlix">
-            <ul class="d-flex list-unstyled">
+            <img class="main-logo" src="https://fontmeme.com/permalink/211201/64bc1d45af49ec05ce492a388017c0ec.png" alt="FlixFlix">
+            <ul class="d-flex m-0 list-unstyled">
                 <li class="mx-4">Film</li>
                 <li class="mx-4">Serie TV</li>
                 <li class="mx-4">Documentari</li>
@@ -65,6 +65,17 @@ header{
         div{
             background-color: black;
         }
+        li:hover{
+            color:lightgray;
+            transition: .2s
+        }
+        .main-logo{
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.03);
+                transition: .3s;
+            }
+        }
 }
 
 li, i{
@@ -74,7 +85,8 @@ li, i{
 .logo-profilo{
     width: 40px;
     height: 40px;
-    margin-right: 1rem,
+    margin-right: 1rem;
+    cursor: pointer;
 
 }
 input{
@@ -97,6 +109,9 @@ button{
     border-radius: 20px;
     border-style: none;
     border: 2px solid white;
-    padding: 5px
+    padding: 5px;
+    &:hover{
+        outline: 1px solid white;
+    }
 }
 </style>

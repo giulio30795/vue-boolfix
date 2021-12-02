@@ -1,6 +1,18 @@
 <template>
     <div class="contenitore">
-        <h2 class="mx-4">Film</h2>
+
+        <div v-show="filmList.length === 0 && seriesList.length === 0">
+            <h2 class=" main-placeholder mt-5 text-center">Scegli un titolo dal nostro catalogo e goditi lo spettacolo!</h2>
+        </div>
+
+
+
+        <div class="ds-flex align-items-center mx-4 my-2"
+            v-show="filmList.length > 0">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Netflix-new-icon.png" alt="logo">
+            <h2 class="">Film</h2>
+        </div>
+
         <section class="film d-flex p-2">
                 <Card
                 v-for="element in filmList" :key="element.id"
@@ -13,7 +25,11 @@
                 />
         </section>
 
-        <h2 class="mx-4">Serie TV</h2>
+        <div class="ds-flex align-items-center mx-4 my-2"
+            v-show="seriesList.length > 0">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Netflix-new-icon.png" alt="logo">
+            <h2 class="">Serie TV</h2>
+        </div>
         <section class="serie-tv d-flex p-2">
                 <Card
                 v-for="element in seriesList" :key="element.id"
@@ -47,11 +63,27 @@ components:{
 </script>
 
 <style scoped lang="scss">
+
+.main-placeholder{
+    color: #dc1a28
+}
+
+.ds-flex{
+    display: flex;
+}
+
+section{
+    overflow-x:auto
+}
 .contenitore{
-    overflow-x: auto ;
+    overflow-y: auto ;
     padding-top: 120px;
     background-color: black;
-    height: 100vh;
+    min-height: 100vh;
+    img{
+        width: 60px;
+        height: 60px;
+    }
 }
 h2{
     color: white,
