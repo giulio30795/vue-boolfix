@@ -64,13 +64,13 @@ data(){
     position: relative;
     background-color: transparent;
     cursor: pointer;
-            &:hover .img-container {
-                filter: blur(5px);
-            }
-            &:hover .text-container{
-                transition: .5s;
-                filter: opacity(100%);
-                transform: rotate(360deg);
+        &:hover .img-container {
+            filter: blur(5px);
+        }
+        &:hover .text-container{
+            transition: .5s;
+            filter: opacity(100%);
+        }
         h4{
             font-size: 1rem;
             color: #dc1a28;
@@ -78,11 +78,10 @@ data(){
         }
         li{
             font-size: 1.2rem;
-            
         }
         li.overview{
-    font-size: 14px;
-}
+        font-size: 14px;
+        }
 }
 img {
     width: 300px;
@@ -98,7 +97,6 @@ img {
     width: 100%;
     height:100%;
     overflow: hidden;
-    }
 }
 
 </style>
