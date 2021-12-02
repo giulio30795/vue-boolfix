@@ -59,23 +59,23 @@ header{
     width: 100%;
     height: 120px;
     z-index:1;
-        i{
-            font-size: 1.5rem;
+    i{
+        font-size: 1.5rem;
+    }
+    div{
+        background-color: black;
+    }
+    li:hover{
+        color:lightgray;
+        transition: .2s
+    }
+    .main-logo{
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.03);
+            transition: .3s;
         }
-        div{
-            background-color: black;
-        }
-        li:hover{
-            color:lightgray;
-            transition: .2s
-        }
-        .main-logo{
-            cursor: pointer;
-            &:hover{
-                transform: scale(1.03);
-                transition: .3s;
-            }
-        }
+    }
 }
 
 li, i{
@@ -87,8 +87,8 @@ li, i{
     height: 40px;
     margin-right: 1rem;
     cursor: pointer;
-
 }
+
 input{
     color: white;
     background-color: black;

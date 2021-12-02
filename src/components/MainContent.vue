@@ -113,47 +113,47 @@ h2{
 }
 
 .animation {
-  display: flex;
+    display: flex;
 } 
 
 .animation div {
-  margin: 10px;
-  width: 50px;
-  height: 50px;
-  background-color: #dc1a28;
-  border-radius: 50%;
-  animation-duration: 0.8s;
-  animation-iteration-count: infinite;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: #dc1a28;
+    border-radius: 50%;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
 }
 
 .one {
-  animation-name: load-one;
+    animation-name: load-one;
 }
 
 @keyframes load-one {
   30% {
-     transform: translateY(-50%);
-  }
+    transform: translateY(-50%);
+    }
 }
 
 .two {
-  animation-name: load-two;
+    animation-name: load-two;
 }
 
 @keyframes load-two {
   50% {
-     transform: translateY(-50%);
-  }
+    transform: translateY(-50%);
+    }
 }
 
 .three {
-  animation-name: load-three;
+    animation-name: load-three;
 }
 
 @keyframes load-three {
   70% {
-     transform: translateY(-50%);
-  }
+    transform: translateY(-50%);
+    }
 }
 
 </style>

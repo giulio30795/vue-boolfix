@@ -64,24 +64,24 @@ data(){
     position: relative;
     background-color: transparent;
     cursor: pointer;
-        &:hover .img-container {
-            filter: blur(5px);
-        }
-        &:hover .text-container{
-            transition: .5s;
-            filter: opacity(100%);
-        }
-        h4{
-            font-size: 1rem;
-            color: #dc1a28;
-            margin: 0;
-        }
-        li{
-            font-size: 1.2rem;
-        }
-        li.overview{
+    &:hover .img-container {
+        filter: blur(5px);
+    }
+    &:hover .text-container{
+        transition: .5s;
+        filter: opacity(100%);
+    }
+    h4{
+        font-size: 1rem;
+        color: #dc1a28;
+        margin: 0;
+    }
+    li{
+        font-size: 1.2rem;
+    }
+    li.overview{
         font-size: 14px;
-        }
+    }
 }
 img {
     width: 300px;
