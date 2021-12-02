@@ -83,7 +83,9 @@ components:{
     background-position: top;
     overflow-y:hidden;
     h2{
-        color: #dc1a28;
+        color: white;
+        font-weight: 600;
+        text-shadow: 3px 3px black;
     }
     .flix-logo{
         width: 500px;
@@ -102,7 +104,7 @@ section{
     overflow-y: auto ;
     padding-top: 120px;
     background-color: black;
-    min-height: 100vh;
+    height: 100vh;
     img{
         width: 60px;
         height: 60px;
