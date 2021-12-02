@@ -44,7 +44,6 @@ methods:{
         this.Query = '';
     }
 }
-
 }
 
 </script>
