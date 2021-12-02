@@ -3,8 +3,14 @@
 
         <div class="main-placeholder ds-flex flex-column" v-show="filmList.length === 0 && seriesList.length === 0">
             <h2 class=" fs-2 mt-5 text-center">Scegli un titolo dal nostro catalogo e goditi lo spettacolo!</h2>
-            <div class="flex-grow-1 ds-flex align-items-center"> 
-                <img class=" flix-logo ms-5 mt-5 justify-self-center" src="https://fontmeme.com/permalink/211202/bec1c906b74dd02dc222c398ed8c8df6.png" alt="FlixFlix">
+            <div class="ds-flex flex-grow-1 justify-content-around align-items-center"> 
+                <img class=" flix-logo ms-5 mt-5" src="https://fontmeme.com/permalink/211202/bec1c906b74dd02dc222c398ed8c8df6.png" alt="FlixFlix">
+
+                <div class="animation align-items-end">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                </div>
             </div>
         </div>
 
@@ -80,9 +86,9 @@ components:{
         color: #dc1a28;
     }
     .flix-logo{
-            width: 500px;
-            height:250px;
-        }
+        width: 500px;
+        height:200px;
+    }
 }
 
 .ds-flex{
@@ -104,6 +110,50 @@ section{
 }
 h2{
     color: white,
+}
+
+.animation {
+  display: flex;
+} 
+
+.animation div {
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: #dc1a28;
+  border-radius: 50%;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+
+.one {
+  animation-name: load-one;
+}
+
+@keyframes load-one {
+  30% {
+     transform: translateY(-50%);
+  }
+}
+
+.two {
+  animation-name: load-two;
+}
+
+@keyframes load-two {
+  50% {
+     transform: translateY(-50%);
+  }
+}
+
+.three {
+  animation-name: load-three;
+}
+
+@keyframes load-three {
+  70% {
+     transform: translateY(-50%);
+  }
 }
 
 </style>
